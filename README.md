@@ -1,3 +1,1 @@
-# Simulator
-
-# improve_pixijs
+# Improve Pixi.js

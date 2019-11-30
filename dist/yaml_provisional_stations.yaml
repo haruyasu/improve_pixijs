@@ -1,0 +1,35 @@
+stations:
+  - id: "BLANK01"
+    name: "ブランク材倉庫"
+    rack_id: "BLANK01"
+    rack_type: 1
+    location:
+      x: 250
+      y: 75
+
+  - id: "CHILDN"
+    name: "子部品（機械部品課）"
+    rack_id: "CHILDN"
+    rack_type: 1
+    location:
+      x: 475
+      y: 300
+
+  - id: "CHILDS"
+    name: "子部品（金型部品課）"
+    rack_id: "CHILDS"
+    rack_type: 1
+    location:
+      x: 250
+      y: 475
+
+  - id: "CHOU01"
+    name: "調達課"
+    rack_id: "CHOU01"
+    rack_type: 1
+    location:
+      x: 85
+      y: 300
+
+defaults:
+  capacity: 1000

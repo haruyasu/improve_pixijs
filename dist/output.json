@@ -1,0 +1,68 @@
+{
+    "09:00": {
+        "A1": {
+            "location": "home1",
+            "state": "initial"
+        },
+        "A2": {
+            "location": "home2",
+            "state": "initial"
+        }
+    },
+    "09:10": {
+        "A1": {
+            "location": "station1",
+            "state": "arrive"
+        },
+        "A2": {
+            "location": "station1",
+            "state": "arrive"
+        }
+    },
+    "09:20": {
+        "A1": {
+            "location": "station1",
+            "state": "unloading"
+        },
+        "A2": {
+            "location": "station1",
+            "state": "unloading"
+        }
+    },
+    "09:30": {
+        "A1": {
+            "location": "station1",
+            "state": "loading"
+        }
+    },
+    "09:40": {
+        "A1": {
+            "location": "station1",
+            "state": "departure"
+        }
+    },
+    "09:50": {
+        "A1": {
+            "location": "station2",
+            "state": "delivering"
+        }
+    },
+    "10:00": {
+        "A2": {
+            "location": "home2",
+            "state": "initial"
+        }
+    },
+    "10:10": {
+        "A2": {
+            "location": "station1",
+            "state": "arrive"
+        }
+    },
+    "10:20": {
+        "A2": {
+            "location": "home2",
+            "state": "initial"
+        }
+    }
+}
