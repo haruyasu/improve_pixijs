@@ -86,9 +86,23 @@ var slider = noUiSlider.create(slider1, {
 	}
 });
 
+var count = 540;
+var countup = function(){
+	slider1.noUiSlider.set(count = count + 10);
+}
+
 setButton.addEventListener("click", function() {
-	slider1.noUiSlider.set(720);
+	var id = setInterval(function(){
+		countup();
+		if(count > 660){　
+			clearInterval(id);　//idをclearIntervalで指定している
+		}
+	}, 500);
+	count = 540;
 });
+
+
+
 
 // var B = n(238);
 
@@ -637,6 +651,35 @@ var stackNum = 0;
 
 // var resultCsv = [];
 
+
+// let station1_arrive = new PIXI.Text("0", {
+// 	fontSize: 15,
+// 	fill: 0x000000
+// });
+// station1_arrive.x = 230;
+// station1_arrive.y = 130;
+// app.stage.addChild(station1_arrive);
+
+// let station1_loading = new PIXI.Text("0", {
+// 	fontSize: 15,
+// 	fill: 0x000000
+// });
+// station1_loading.x = 260;
+// station1_loading.y = 130;
+// app.stage.addChild(station1_loading);
+
+// let station1_departure = new PIXI.Text("0", {
+// 	fontSize: 15,
+// 	fill: 0x000000
+// });
+// station1_departure.x = 290;
+// station1_departure.y = 130;
+// app.stage.addChild(station1_departure);
+
+// var station1_arrive_num = 0;
+// var station1_loading_num = 0;
+// var station1_departure_num = 0;
+
 readTextFile("output.json", function(text){
 	var data = JSON.parse(text);
 	// console.log(data);
@@ -658,6 +701,42 @@ readTextFile("output.json", function(text){
 				var stationY = Number(stationInfo[stationIndex].y);
 				var bucketState = data[sliderTime][bucketKey[i]]["state"];
 				var stationDir = stationInfo[stationIndex].dir;
+
+				// if (bucketState == "arrive") {
+				// 	station1_arrive_num += 1;
+				// 	station1_arrive.text = String(station1_arrive_num);
+				// 	station1_departure_num = 0;
+				// 	station1_departure.text = "0";
+				// 	station1_loading_num = 0;
+				// 	station1_loading.text = "0";
+				// }
+				// else if (bucketState == "departure") {
+				// 	station1_departure_num += 1;
+				// 	station1_departure.text = String(station1_departure_num);
+				// 	station1_arrive_num = 0;
+				// 	station1_arrive.text = "0";
+				// 	station1_loading_num = 0;
+				// 	station1_loading.text = "0";
+				// }
+				// else if (bucketState == "loading" || bucketState == "unloading") {
+				// 	station1_loading_num += 1;
+				// 	station1_loading.text = String(station1_loading_num);
+				// 	station1_arrive_num = 0;
+				// 	station1_arrive.text = "0";
+				// 	station1_departure_num = 0;
+				// 	station1_departure.text = "0";
+				// }
+				// else {
+				// 	station1_arrive_num = 0;
+				// 	station1_departure_num = 0;
+				// 	station1_loading_num = 0;
+				// 	station1_arrive.text = "0";
+				// 	station1_departure.text = "0";
+				// 	station1_loading.text = "0";
+				// }
+
+
+
 
 				if (bucketState == "arrive" && stationDir == "right") {
 					bucketInfo[bucketIndex].bucket.x = stationX - stationWidth;
