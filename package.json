@@ -11,7 +11,7 @@
   "author": "Haruyasu Kaitori",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "fractional": "^1.0.0",
     "fs": "0.0.1-security",
